@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body>
+    <div class="timeline">
+        <div>
+          <form id="twit-form" action="/post" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+              <textarea id="twit" name="content" maxlength="140"></textarea>
+            </div>
+            <div class="img-preview">
+              <img id="img-preview" src="" style="display: none;" width="250" alt="preview">
+              <input id="img-url" type="hidden" name="url">
+            </div>
+            <div>
+              <label id="img-label" for="img">Upload Image</label>
+              <input id="img" type="file" accept="image/*">
+              <button id="twit-btn" type="submit" class="btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      <div class="twits">
+        <form id="hashtag-form" action="/hashtag">
+          <input type="text" name="hashtag" placeholder="tag search">
+          <button class="btn">Search</button>
+        </form>
+          <div class="twit">
+            <input type="hidden" value="{{twit.User.id}}" class="twit-user-id">
+            <input type="hidden" value="{{twit.id}}" class="twit-id">
+            <div class="twit-author">User Name</div>
+            <button class="twit-follow">Following</button>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

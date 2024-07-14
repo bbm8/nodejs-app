@@ -1,0 +1,23 @@
+{
+  "name": "queue-it javascript v4 ",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@queue-it/connector-javascript": "^4.3.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "morgan": "^1.10.0",
+    "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
