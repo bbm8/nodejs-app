@@ -1,16 +1,15 @@
 
-/*
-const express = require('express');
+// const express = require('express');
 
-const router = express.Router();
+// const router = express.Router();
 
-// GET / 라우터
-router.get('/', (req, res) => {
-  res.send('Hello, Express');
-});
+// // GET / 라우터
+// router.get('/', (req, res) => {
+//   res.send('Hello, Express');
+// });
 
-module.exports = router;
-*/
+// module.exports = router;
+
 
 const QUEUEIT_FAILED_HEADERNAME = "x-queueit-failed"; 
 const QUEUEIT_CONNECTOR_EXECUTED_HEADER_NAME = "x-queueit-connector"; 
@@ -34,7 +33,13 @@ function isIgnored(req) {
   return req.method == "HEAD" || req.method == "OPTIONS"; 
 } 
 
-/* GET home page. */ 
+
+// const ctrlUser = require('./user');
+// /* GET user Router */
+// router.route('/user')
+//   .get(ctrlUser);
+
+/* GET home page */ 
 router.get("/", async function (req, res, next) { 
   try { 
     res.header(QUEUEIT_CONNECTOR_EXECUTED_HEADER_NAME, QUEUEIT_CONNECTOR_NAME); 
